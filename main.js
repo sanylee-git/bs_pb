@@ -10,22 +10,29 @@ function getISOWeek(date) {
 function getDatesForWeek(weekId) {
     if (!weekId) return { start: null, end: null };
     const [year, weekNumber] = weekId.split('-').map(Number);
-    const simple = new Date(year, 0, 1 + (weekNumber - 1) * 7);
-    const dayOfWeek = simple.getDay();
+    if (!year || !weekNumber) return { start: null, end: null };
+
+    const simple = new Date(Date.UTC(year, 0, 1 + (weekNumber - 1) * 7));
+    const dayOfWeek = simple.getUTCDay();
     const isoWeekStart = simple;
     if (dayOfWeek <= 4) {
-        isoWeekStart.setDate(simple.getDate() - simple.getDay() + 1);
+        isoWeekStart.setUTCDate(simple.getUTCDate() - simple.getUTCDay() + 1);
     } else {
-        isoWeekStart.setDate(simple.getDate() + 8 - simple.getDay());
+        isoWeekStart.setUTCDate(simple.getUTCDate() + 8 - simple.getUTCDay());
     }
     
     const weekEnd = new Date(isoWeekStart);
-    weekEnd.setDate(weekEnd.getDate() + 6);
+    weekEnd.setUTCDate(weekEnd.getUTCDate() + 6);
 
-    return { start: isoWeekStart, end: weekEnd };
+    // Return dates in local time zone for display
+    return { 
+        start: new Date(isoWeekStart.getUTCFullYear(), isoWeekStart.getUTCMonth(), isoWeekStart.getUTCDate()), 
+        end: new Date(weekEnd.getUTCFullYear(), weekEnd.getUTCMonth(), weekEnd.getUTCDate()) 
+    };
 }
 
 function formatDate(date) {
+    if (!date || isNaN(date)) return '';
     return date.toISOString().split('T')[0];
 }
 
@@ -37,6 +44,13 @@ class MonthCalendar extends HTMLElement {
         this._year = new Date().getFullYear();
         this._month = 0;
         this._selectedWeek = null;
+        this.isReady = false; // Add a ready flag
+    }
+
+    connectedCallback() {
+        this.render();
+        this.isReady = true;
+        this.dispatchEvent(new CustomEvent('ready', { bubbles: true, composed: true }));
     }
 
     static get observedAttributes() {
@@ -48,16 +62,17 @@ class MonthCalendar extends HTMLElement {
         if (name === 'year') this._year = parseInt(newValue);
         if (name === 'month') this._month = parseInt(newValue);
         if (name === 'selected-week') this._selectedWeek = newValue;
-        this.render();
+        if (this.isReady) { // Only render if component is ready
+            this.render();
+        }
     }
 
     render() {
         const monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
         const monthName = monthNames[this._month];
 
-        // Create a set of holiday dates for efficient lookup
-        const yearHolidays = (holidays[this._year]?.KR || []).concat(holidays[this._year]?.US || []);
-        const holidaySet = new Set(yearHolidays.map(h => h.date));
+        const krHolidays = holidays[this._year]?.KR || [];
+        const holidayMap = new Map(krHolidays.map(h => [h.date, h.name]));
 
         const firstDateOfMonth = new Date(this._year, this._month, 1);
         const startDay = firstDateOfMonth.getDay() === 0 ? 6 : firstDateOfMonth.getDay() - 1;
@@ -80,9 +95,12 @@ class MonthCalendar extends HTMLElement {
                 if (currentDate.getMonth() !== this._month) classes.push('muted');
                 if (dayOfWeek === 6) classes.push('saturday');
                 if (dayOfWeek === 0) classes.push('sunday');
-                if (holidaySet.has(dateString)) classes.push('holiday');
+                
+                const holidayName = holidayMap.get(dateString);
+                if (holidayName) classes.push('holiday');
 
-                weekRowHtml += `<td class="${classes.join(' ')}">${currentDate.getDate()}</td>`;
+                const holidayNameHtml = holidayName ? `<div class="holiday-name">${holidayName}</div>` : '';
+                weekRowHtml += `<td class="${classes.join(' ')}"><div>${currentDate.getDate()}</div>${holidayNameHtml}</td>`;
                 currentDate.setDate(currentDate.getDate() + 1);
             }
             
@@ -98,11 +116,10 @@ class MonthCalendar extends HTMLElement {
                 </tr>
             `;
 
-            if (currentDate.getMonth() > this._month && currentDate.getFullYear() >= this._year) {
-                done = true;
-            }
-            if (this._month === 11 && currentDate.getFullYear() > this._year) {
-                done = true;
+            if (this._month === 11) {
+                if (currentDate.getFullYear() > this._year) done = true;
+            } else {
+                if (currentDate.getMonth() > this._month && currentDate.getFullYear() >= this._year) done = true;
             }
         }
 
@@ -112,25 +129,18 @@ class MonthCalendar extends HTMLElement {
                 .calendar-card { font-size: 0.875rem; }
                 .month-header { font-size: 1rem; font-weight: 600; text-align: center; margin-bottom: 1rem; color: var(--header-text-color); }
                 table { width: 100%; border-collapse: collapse; }
-                th, td { text-align: center; padding: 0.5rem 0; }
+                th, td { text-align: center; padding: 0.5rem 0.2rem; vertical-align: top; height: 4em; }
                 th { font-weight: 500; color: var(--muted-text-color); font-size: 0.75rem; }
-                .week-number { color: var(--muted-text-color); font-weight: 500; }
+                td > div:first-child { margin-bottom: 4px; }
+                .week-number { color: var(--muted-text-color); font-weight: 500; vertical-align: middle; }
                 .muted { color: var(--muted-text-color); opacity: 0.5; }
-                /* Day-specific colors */
                 .saturday { color: var(--saturday-color); }
-                .sunday, .holiday { color: var(--sunday-holiday-color); font-weight: 600; }
-                /* Row styles */
+                .sunday, .holiday > div:first-child { color: var(--sunday-holiday-color); font-weight: 600; }
+                .holiday-name { font-size: 0.65rem; font-weight: 400; color: var(--sunday-holiday-color); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45px; margin: 0 auto; }
                 .week-row { cursor: pointer; transition: background-color 0.15s; }
                 .week-row:hover { background-color: var(--accent-color); }
-                .week-row.selected {
-                    background-color: var(--primary-color);
-                    color: white;
-                    font-weight: 600;
-                }
-                /* Reset colors for selected row */
-                .week-row.selected td, .week-row.selected .week-number, .week-row.selected .muted {
-                    color: white; 
-                }
+                .week-row.selected { background-color: var(--primary-color); color: white; font-weight: 600; }
+                .week-row.selected td, .week-row.selected .week-number, .week-row.selected .muted, .week-row.selected .saturday, .week-row.selected .sunday, .week-row.selected .holiday > div:first-child, .week-row.selected .holiday-name { color: white; }
                 .week-row.selected .muted { opacity: 0.8; }
             </style>
             <div class="calendar-card">
@@ -148,11 +158,7 @@ class MonthCalendar extends HTMLElement {
 
         this.shadowRoot.querySelectorAll('.week-row').forEach(row => {
             row.addEventListener('click', () => {
-                this.dispatchEvent(new CustomEvent('week-selected', {
-                    bubbles: true,
-                    composed: true,
-                    detail: { weekId: row.dataset.weekId }
-                }));
+                this.dispatchEvent(new CustomEvent('week-selected', { bubbles: true, composed: true, detail: { weekId: row.dataset.weekId } }));
             });
         });
     }
@@ -173,36 +179,75 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderYear(year) {
         yearDisplay.textContent = year;
         gridContainer.innerHTML = '';
+        const calendarPromises = [];
         for (let i = 0; i < 12; i++) {
             const monthCard = document.createElement('month-calendar');
+            calendarPromises.push(customElements.whenDefined('month-calendar').then(() => {
+                return new Promise(resolve => {
+                    monthCard.addEventListener('ready', () => resolve(monthCard), { once: true });
+                });
+            }));
             monthCard.setAttribute('year', year);
             monthCard.setAttribute('month', i);
-            if (selectedWeekId) {
-                const [selectedYear] = selectedWeekId.split('-');
-                if (selectedYear == year) {
-                    monthCard.setAttribute('selected-week', selectedWeekId);
-                }
-            }
             gridContainer.appendChild(monthCard);
         }
+        return Promise.all(calendarPromises);
     }
 
     function updateSelection(weekId) {
         selectedWeekId = weekId;
         const [year, week] = weekId.split('-');
         const dates = getDatesForWeek(weekId);
-        weekDisplay.textContent = `선택: ${year}년 CW${week} · ${formatDate(dates.start)} ~ ${formatDate(dates.end)}`;
         
-        gridContainer.querySelectorAll('month-calendar').forEach(cal => {
+        if (dates.start && dates.end) {
+             weekDisplay.textContent = `선택: ${year}년 CW${week} · ${formatDate(dates.start)} ~ ${formatDate(dates.end)}`;
+        } else {
+             weekDisplay.textContent = '주를 선택하세요';
+        }
+        
+        document.querySelectorAll('month-calendar').forEach(cal => {
             cal.setAttribute('selected-week', selectedWeekId);
         });
     }
 
     // --- Event Listeners ---
-    prevYearBtn.addEventListener('click', () => { currentYear--; renderYear(currentYear); });
-    nextYearBtn.addEventListener('click', () => { currentYear++; renderYear(currentYear); });
-    gridContainer.addEventListener('week-selected', (e) => { updateSelection(e.detail.weekId); });
+    prevYearBtn.addEventListener('click', () => { 
+        currentYear--; 
+        renderYear(currentYear).then(() => {
+            if (selectedWeekId) {
+                const [selectedYear] = selectedWeekId.split('-');
+                if (currentYear == selectedYear) {
+                    updateSelection(selectedWeekId);
+                }
+            }
+        });
+    });
+    nextYearBtn.addEventListener('click', () => { 
+        currentYear++; 
+        renderYear(currentYear).then(() => {
+             if (selectedWeekId) {
+                const [selectedYear] = selectedWeekId.split('-');
+                if (currentYear == selectedYear) {
+                    updateSelection(selectedWeekId);
+                }
+            }
+        });
+    });
+    gridContainer.addEventListener('week-selected', (e) => { 
+        updateSelection(e.detail.weekId); 
+    });
 
-    // --- Initial Render ---
-    renderYear(currentYear);
+    // --- Initial Render & Selection ---
+    async function initializeCalendar() {
+        await renderYear(currentYear);
+        const today = new Date();
+        const todayYear = today.getFullYear();
+        if (currentYear === todayYear) {
+            const currentWeekNumber = getISOWeek(today);
+            const currentWeekId = `${todayYear}-${currentWeekNumber}`;
+            updateSelection(currentWeekId);
+        }
+    }
+
+    initializeCalendar();
 });
