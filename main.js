@@ -73,8 +73,8 @@ class MonthCalendar extends HTMLElement {
     }
 
     render() {
-        const monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
-        const monthName = monthNames[this._month];
+        const monthKeys = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+        const monthName = window.i18n.t('calendar.month.' + monthKeys[this._month]);
 
         const krHolidays = holidays[this._year]?.KR || [];
         const holidayMap = new Map(krHolidays.map(h => [h.date, h.name]));
@@ -175,7 +175,7 @@ class MonthCalendar extends HTMLElement {
                 <h3 class="month-header">${monthName}</h3>
                 <table>
                     <thead>
-                        <tr><th>CW</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th><th>일</th></tr>
+                        <tr><th>CW</th>${['mon','tue','wed','thu','fri','sat','sun'].map(d=>`<th>${window.i18n.t('calendar.day.'+d)}</th>`).join('')}</tr>
                     </thead>
                     <tbody>
                         ${weeksHtml}
@@ -230,15 +230,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const dates = getDatesForWeek(weekId);
         
         if (dates.start && dates.end) {
-             weekDisplay.textContent = `선택: ${year}년 CW${week} · ${formatDate(dates.start)} ~ ${formatDate(dates.end)}`;
+             const tmpl = window.i18n.t('calendar.selection.text');
+             weekDisplay.textContent = tmpl
+                 .replace('{year}', year)
+                 .replace('{week}', week)
+                 .replace('{start}', formatDate(dates.start))
+                 .replace('{end}', formatDate(dates.end));
         } else {
-             weekDisplay.textContent = '주를 선택하세요';
+             weekDisplay.textContent = window.i18n.t('calendar.selection.prompt');
         }
         
         document.querySelectorAll('month-calendar').forEach(cal => {
             cal.setAttribute('selected-week', selectedWeekId);
         });
     }
+
+    // 언어 전환 시 선택된 주 표시 갱신용 (lang.js에서 호출)
+    window.__refreshWeekDisplay = () => {
+        if (selectedWeekId) updateSelection(selectedWeekId);
+        else if (weekDisplay) weekDisplay.textContent = window.i18n.t('calendar.selection.prompt');
+    };
 
     // --- Event Listeners ---
     prevYearBtn.addEventListener('click', () => { 

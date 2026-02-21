@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="theme.js" defer></script>
+    <script src="lang.js" defer></script>
     <meta name="google-adsense-account" content="ca-pub-9688338422874533">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9688338422874533" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -34,9 +35,9 @@
             <div class="header-left">
                 <h1 class="logo"><a href="index.html">CW Calendar</a></h1>
                 <nav class="nav">
-                    <a href="index.html" class="nav-item active">홈</a>
-                    <a href="about.html" class="nav-item">소개</a>
-                    <a href="privacy.html" class="nav-item">개인정보처리방침</a>
+                    <a href="index.html" class="nav-item active" data-i18n="shared.nav.home">홈</a>
+                    <a href="about.html" class="nav-item" data-i18n="shared.nav.about">소개</a>
+                    <a href="privacy.html" class="nav-item" data-i18n="shared.nav.privacy">개인정보처리방침</a>
                 </nav>
             </div>
             <div class="theme-switcher">
@@ -44,25 +45,29 @@
                 <button data-theme-switcher="dark">Dark</button>
                 <button data-theme-switcher="system">System</button>
             </div>
+            <div class="lang-switcher">
+                <button data-lang-switcher="ko">한</button>
+                <button data-lang-switcher="en">EN</button>
+            </div>
         </div>
     </header>
 
     <main>
         <section class="hero-section">
             <div class="container">
-                <h2 class="hero-title">업무 스케줄 관리, 주 단위로 스마트하게</h2>
-                <p class="hero-subtitle">CW Calendar와 함께 연간 업무 계획을 주차(Calendar Week) 기준으로 명확하게 파악하고 관리하여 생산성을 높여보세요.</p>
+                <h2 class="hero-title" data-i18n="index.hero.title">업무 스케줄 관리, 주 단위로 스마트하게</h2>
+                <p class="hero-subtitle" data-i18n="index.hero.subtitle">CW Calendar와 함께 연간 업무 계획을 주차(Calendar Week) 기준으로 명확하게 파악하고 관리하여 생산성을 높여보세요.</p>
             </div>
         </section>
 
         <div class="app-container container">
             <header class="app-header">
-                <button id="prev-year" class="year-nav-btn" aria-label="이전 년도">&lt;</button>
+                <button id="prev-year" class="year-nav-btn" aria-label="이전 년도" data-i18n-aria="index.calendar.prevYear">&lt;</button>
                 <div class="header-content">
                     <h3 id="current-year-display" class="current-year">2024</h3>
-                    <p id="selected-week-display" class="selected-weeks">선택된 주 없음</p>
+                    <p id="selected-week-display" class="selected-weeks" data-i18n="index.calendar.noWeekSelected">선택된 주 없음</p>
                 </div>
-                <button id="next-year" class="year-nav-btn" aria-label="다음 년도">&gt;</button>
+                <button id="next-year" class="year-nav-btn" aria-label="다음 년도" data-i18n-aria="index.calendar.nextYear">&gt;</button>
             </header>
             <div id="calendar-grid-container">
                 <!-- Month calendar components will be dynamically inserted here -->
@@ -71,43 +76,43 @@
 
         <div class="container content-sections">
             <section class="content-section">
-                <h3 class="section-title">주차(Calendar Week)란 무엇일까요?</h3>
-                <p class="section-text">주차(CW)는 1년 중 특정 주를 서수로 나타내는 표준 방식(ISO 8601)입니다. 많은 기업, 특히 글로벌 협업이 잦은 환경에서는 프로젝트 일정, 마감일, 주간 보고 등을 주차 기준으로 관리합니다. 이를 통해 "3월 마지막 주"와 같은 모호한 표현 대신 "CW13"과 같이 명확하게 소통하여 혼동을 줄일 수 있습니다.</p>
+                <h3 class="section-title" data-i18n="index.cw.title">주차(Calendar Week)란 무엇일까요?</h3>
+                <p class="section-text" data-i18n="index.cw.body">주차(CW)는 1년 중 특정 주를 서수로 나타내는 표준 방식(ISO 8601)입니다. 많은 기업, 특히 글로벌 협업이 잦은 환경에서는 프로젝트 일정, 마감일, 주간 보고 등을 주차 기준으로 관리합니다. 이를 통해 "3월 마지막 주"와 같은 모호한 표현 대신 "CW13"과 같이 명확하게 소통하여 혼동을 줄일 수 있습니다.</p>
             </section>
 
             <section class="content-section">
-                <h3 class="section-title">스마트한 스케줄 관리를 위한 팁</h3>
+                <h3 class="section-title" data-i18n="index.tips.title">스마트한 스케줄 관리를 위한 팁</h3>
                 <ol class="tips-list">
-                    <li class="tip-item"><strong>주차(CW) 기준으로 계획하기:</strong> 분기별, 월별 목표를 주차 단위로 세분화하여 프로젝트의 진행 상황을 명확하게 추적하세요.</li>
-                    <li class="tip-item"><strong>중요 마감일 표시:</strong> 연간 캘린더에서 핵심 프로젝트의 마감일이 포함된 주를 시각적으로 강조하여 전체적인 시간 계획을 수립하세요.</li>
-                    <li class="tip-item"><strong>팀과 공유:</strong> 팀원들과 주차 기준으로 업무를 공유하고 논의하면, 모두가 동일한 시간표에 따라 움직일 수 있습니다.</li>
-                    <li class="tip-item"><strong>규칙적인 검토:</strong> 매주 초(예: 월요일), 해당 주차의 목표와 주요 업무를 검토하는 시간을 가지세요.</li>
-                    <li class="tip-item"><strong>공휴일 활용:</strong> 한국과 미국의 공휴일을 미리 확인하여 업무 집중 기간과 휴식 기간을 전략적으로 배분하세요.</li>
+                    <li class="tip-item"><strong data-i18n="index.tips.item1.label">주차(CW) 기준으로 계획하기:</strong><span data-i18n="index.tips.item1.body"> 분기별, 월별 목표를 주차 단위로 세분화하여 프로젝트의 진행 상황을 명확하게 추적하세요.</span></li>
+                    <li class="tip-item"><strong data-i18n="index.tips.item2.label">중요 마감일 표시:</strong><span data-i18n="index.tips.item2.body"> 연간 캘린더에서 핵심 프로젝트의 마감일이 포함된 주를 시각적으로 강조하여 전체적인 시간 계획을 수립하세요.</span></li>
+                    <li class="tip-item"><strong data-i18n="index.tips.item3.label">팀과 공유:</strong><span data-i18n="index.tips.item3.body"> 팀원들과 주차 기준으로 업무를 공유하고 논의하면, 모두가 동일한 시간표에 따라 움직일 수 있습니다.</span></li>
+                    <li class="tip-item"><strong data-i18n="index.tips.item4.label">규칙적인 검토:</strong><span data-i18n="index.tips.item4.body"> 매주 초(예: 월요일), 해당 주차의 목표와 주요 업무를 검토하는 시간을 가지세요.</span></li>
+                    <li class="tip-item"><strong data-i18n="index.tips.item5.label">공휴일 활용:</strong><span data-i18n="index.tips.item5.body"> 한국과 미국의 공휴일을 미리 확인하여 업무 집중 기간과 휴식 기간을 전략적으로 배분하세요.</span></li>
                 </ol>
             </section>
 
             <section class="content-section">
-                <h3 class="section-title">제휴 문의</h3>
-                <p class="section-text">비즈니스 제휴 및 협업 문의를 남겨주시면 빠르게 답변드리겠습니다.</p>
+                <h3 class="section-title" data-i18n="index.contact.title">제휴 문의</h3>
+                <p class="section-text" data-i18n="index.contact.subtitle">비즈니스 제휴 및 협업 문의를 남겨주시면 빠르게 답변드리겠습니다.</p>
                 <form class="contact-form" action="https://formspree.io/f/mreaagww" method="POST">
                     <div class="form-group">
-                        <label class="form-label" for="contact-name">이름</label>
-                        <input class="form-input" type="text" id="contact-name" name="name" placeholder="이름을 입력하세요" required>
+                        <label class="form-label" for="contact-name" data-i18n="index.contact.nameLabel">이름</label>
+                        <input class="form-input" type="text" id="contact-name" name="name" placeholder="이름을 입력하세요" data-i18n-placeholder="index.contact.namePlaceholder" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="contact-email">이메일</label>
-                        <input class="form-input" type="email" id="contact-email" name="email" placeholder="이메일을 입력하세요" required>
+                        <label class="form-label" for="contact-email" data-i18n="index.contact.emailLabel">이메일</label>
+                        <input class="form-input" type="email" id="contact-email" name="email" placeholder="이메일을 입력하세요" data-i18n-placeholder="index.contact.emailPlaceholder" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="contact-message">문의 내용</label>
-                        <textarea class="form-input form-textarea" id="contact-message" name="message" placeholder="문의 내용을 입력하세요" rows="4" required></textarea>
+                        <label class="form-label" for="contact-message" data-i18n="index.contact.messageLabel">문의 내용</label>
+                        <textarea class="form-input form-textarea" id="contact-message" name="message" placeholder="문의 내용을 입력하세요" data-i18n-placeholder="index.contact.messagePlaceholder" rows="4" required></textarea>
                     </div>
-                    <button class="form-submit" type="submit">문의 보내기</button>
+                    <button class="form-submit" type="submit" data-i18n="index.contact.submit">문의 보내기</button>
                 </form>
             </section>
 
             <section class="content-section">
-                <h3 class="section-title">댓글</h3>
+                <h3 class="section-title" data-i18n="index.comments.title">댓글</h3>
                 <div id="disqus_thread"></div>
                 <script>
                     var disqus_config = function () {
@@ -130,9 +135,9 @@
         <div class="container">
             <p>&copy; 2024 CW Calendar. All Rights Reserved.</p>
             <nav class="nav">
-                <a href="index.html" class="nav-item">홈</a>
-                <a href="about.html" class="nav-item">소개</a>
-                <a href="privacy.html" class="nav-item">개인정보처리방침</a>
+                <a href="index.html" class="nav-item" data-i18n="shared.nav.home">홈</a>
+                <a href="about.html" class="nav-item" data-i18n="shared.nav.about">소개</a>
+                <a href="privacy.html" class="nav-item" data-i18n="shared.nav.privacy">개인정보처리방침</a>
             </nav>
         </div>
     </footer>

@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="theme.js" defer></script>
+    <script src="lang.js" defer></script>
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -32,9 +33,9 @@
             <div class="header-left">
                 <h1 class="logo"><a href="index.html">CW Calendar</a></h1>
                 <nav class="nav">
-                    <a href="index.html" class="nav-item">홈</a>
-                    <a href="about.html" class="nav-item">소개</a>
-                    <a href="privacy.html" class="nav-item active">개인정보처리방침</a>
+                    <a href="index.html" class="nav-item" data-i18n="shared.nav.home">홈</a>
+                    <a href="about.html" class="nav-item" data-i18n="shared.nav.about">소개</a>
+                    <a href="privacy.html" class="nav-item active" data-i18n="shared.nav.privacy">개인정보처리방침</a>
                 </nav>
             </div>
             <div class="theme-switcher">
@@ -42,46 +43,38 @@
                 <button data-theme-switcher="dark">Dark</button>
                 <button data-theme-switcher="system">System</button>
             </div>
+            <div class="lang-switcher">
+                <button data-lang-switcher="ko">한</button>
+                <button data-lang-switcher="en">EN</button>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section class="content-section" style="margin-top: 3rem;">
-            <h2 class="section-title">개인정보처리방침</h2>
-            <p class="section-text">최종 수정일: 2024년 7월 30일</p>
+            <h2 class="section-title" data-i18n="privacy.title">개인정보처리방침</h2>
+            <p class="section-text" data-i18n="privacy.lastUpdated">최종 수정일: 2024년 7월 30일</p>
 
-            <h3 class="section-subtitle">1. 총칙</h3>
-            <p class="section-text">
-                CW Calendar(이하 "사이트")는 사용자의 개인정보를 중요하게 생각하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다. 본 개인정보처리방침을 통해 사용자가 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
-            </p>
+            <h3 class="section-subtitle" data-i18n="privacy.s1.title">1. 총칙</h3>
+            <p class="section-text" data-i18n="privacy.s1.body">CW Calendar(이하 "사이트")는 사용자의 개인정보를 중요하게 생각하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다. 본 개인정보처리방침을 통해 사용자가 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.</p>
 
-            <h3 class="section-subtitle">2. 쿠키 사용에 대한 안내</h3>
-            <p class="section-text">
-                본 사이트는 사용자에게 더 나은 서비스를 제공하기 위해 쿠키(Cookie)를 사용합니다. 쿠키는 웹사이트가 사용자의 컴퓨터 브라우저에 보내는 소량의 정보이며, 사용자의 컴퓨터는 식별하지만 사용자를 개인적으로 식별하지는 않습니다.
-            </p>
-            <p class="section-text">
-                특히, 본 사이트는 다음과 같은 제3자 광고 서비스를 이용합니다:
-            </p>
+            <h3 class="section-subtitle" data-i18n="privacy.s2.title">2. 쿠키 사용에 대한 안내</h3>
+            <p class="section-text" data-i18n="privacy.s2.body1">본 사이트는 사용자에게 더 나은 서비스를 제공하기 위해 쿠키(Cookie)를 사용합니다. 쿠키는 웹사이트가 사용자의 컴퓨터 브라우저에 보내는 소량의 정보이며, 사용자의 컴퓨터는 식별하지만 사용자를 개인적으로 식별하지는 않습니다.</p>
+            <p class="section-text" data-i18n="privacy.s2.body2">특히, 본 사이트는 다음과 같은 제3자 광고 서비스를 이용합니다:</p>
             <ul class="list">
-                <li class="list-item"><strong>Google AdSense:</strong> 본 사이트는 Google AdSense를 통해 광고를 게시하고 있습니다. Google과 같은 제3자 광고 사업자는 쿠키를 사용하여 사용자의 이전 웹사이트 방문 기록을 기반으로 맞춤형 광고를 표시할 수 있습니다.</li>
-                <li class="list-item">DoubleClick DART 쿠키를 사용하여 Google 및 Google의 파트너는 본 사이트 및 다른 사이트의 방문 기록을 기반으로 사용자에게 광고를 게재할 수 있습니다.</li>
-                <li class="list-item">사용자는 <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" class="link">Google 광고 설정</a> 페이지에서 맞춤형 광고 게재에 사용되는 DoubleClick DART 쿠키를 사용하지 않도록 설정할 수 있습니다.</li>
+                <li class="list-item"><strong data-i18n="privacy.s2.li1.label">Google AdSense:</strong><span data-i18n="privacy.s2.li1.body"> 본 사이트는 Google AdSense를 통해 광고를 게시하고 있습니다. Google과 같은 제3자 광고 사업자는 쿠키를 사용하여 사용자의 이전 웹사이트 방문 기록을 기반으로 맞춤형 광고를 표시할 수 있습니다.</span></li>
+                <li class="list-item" data-i18n="privacy.s2.li2">DoubleClick DART 쿠키를 사용하여 Google 및 Google의 파트너는 본 사이트 및 다른 사이트의 방문 기록을 기반으로 사용자에게 광고를 게재할 수 있습니다.</li>
+                <li class="list-item"><span data-i18n="privacy.s2.li3.pre">사용자는 </span><a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" class="link" data-i18n="privacy.s2.li3.link">Google 광고 설정</a><span data-i18n="privacy.s2.li3.post"> 페이지에서 맞춤형 광고 게재에 사용되는 DoubleClick DART 쿠키를 사용하지 않도록 설정할 수 있습니다.</span></li>
             </ul>
 
-            <h3 class="section-subtitle">3. 개인정보의 수집 및 이용 목적</h3>
-            <p class="section-text">
-                본 사이트는 주차(CW) 정보 제공 기능 외에 별도의 회원가입이나 개인정보 입력을 요구하지 않습니다. 단, 서비스 이용 과정에서 IP 주소, 쿠키, 방문 일시, 서비스 이용 기록 등이 자동으로 생성되어 수집될 수 있습니다. 이는 서비스 개선 및 통계 분석, 그리고 맞춤형 광고 제공을 위해 사용됩니다.
-            </p>
+            <h3 class="section-subtitle" data-i18n="privacy.s3.title">3. 개인정보의 수집 및 이용 목적</h3>
+            <p class="section-text" data-i18n="privacy.s3.body">본 사이트는 주차(CW) 정보 제공 기능 외에 별도의 회원가입이나 개인정보 입력을 요구하지 않습니다. 단, 서비스 이용 과정에서 IP 주소, 쿠키, 방문 일시, 서비스 이용 기록 등이 자동으로 생성되어 수집될 수 있습니다. 이는 서비스 개선 및 통계 분석, 그리고 맞춤형 광고 제공을 위해 사용됩니다.</p>
 
-            <h3 class="section-subtitle">4. 개인정보의 보유 및 이용기간</h3>
-            <p class="section-text">
-                사용자의 정보는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.
-            </p>
+            <h3 class="section-subtitle" data-i18n="privacy.s4.title">4. 개인정보의 보유 및 이용기간</h3>
+            <p class="section-text" data-i18n="privacy.s4.body">사용자의 정보는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
 
-            <h3 class="section-subtitle">5. 개인정보처리방침의 변경</h3>
-            <p class="section-text">
-                본 개인정보처리방침은 법령 및 방침에 따른 변경 내용의 추가, 삭제 및 정정이 있는 경우에는 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.
-            </p>
+            <h3 class="section-subtitle" data-i18n="privacy.s5.title">5. 개인정보처리방침의 변경</h3>
+            <p class="section-text" data-i18n="privacy.s5.body">본 개인정보처리방침은 법령 및 방침에 따른 변경 내용의 추가, 삭제 및 정정이 있는 경우에는 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p>
         </section>
     </main>
 
@@ -89,9 +82,9 @@
         <div class="container">
             <p>&copy; 2024 CW Calendar. All Rights Reserved.</p>
             <nav class="nav">
-                <a href="index.html" class="nav-item">홈</a>
-                <a href="about.html" class="nav-item">소개</a>
-                <a href="privacy.html" class="nav-item">개인정보처리방침</a>
+                <a href="index.html" class="nav-item" data-i18n="shared.nav.home">홈</a>
+                <a href="about.html" class="nav-item" data-i18n="shared.nav.about">소개</a>
+                <a href="privacy.html" class="nav-item" data-i18n="shared.nav.privacy">개인정보처리방침</a>
             </nav>
         </div>
     </footer>
