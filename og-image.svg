@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a56db"/>
+      <stop offset="100%" stop-color="#0d3372"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid decoration -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="300" y1="0" x2="300" y2="630" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="900" y1="0" x2="900" y2="630" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Calendar icon decoration (top-left area) -->
+  <rect x="80" y="80" width="160" height="160" rx="16" fill="rgba(255,255,255,0.08)"/>
+  <rect x="80" y="80" width="160" height="44" rx="16" fill="rgba(255,255,255,0.15)"/>
+  <rect x="80" y="108" width="160" height="16" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Calendar grid lines inside icon -->
+  <line x1="120" y1="168" x2="200" y2="168" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <line x1="120" y1="196" x2="200" y2="196" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <line x1="160" y1="152" x2="160" y2="224" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+  <!-- CW badge -->
+  <rect x="160" y="460" width="180" height="54" rx="27" fill="rgba(255,255,255,0.15)"/>
+  <text x="250" y="495" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="rgba(255,255,255,0.9)" text-anchor="middle">ISO 8601</text>
+
+  <!-- Main title -->
+  <text x="600" y="255" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="-2">CW Calendar</text>
+
+  <!-- Divider line -->
+  <line x1="360" y1="300" x2="840" y2="300" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+
+  <!-- Subtitle -->
+  <text x="600" y="365" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="rgba(255,255,255,0.82)" text-anchor="middle">주차(CW) 달력 · 한국·미국 공휴일 조회</text>
+
+  <!-- Feature tags -->
+  <rect x="230" y="410" width="200" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
+  <text x="330" y="436" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">2024 ~ 2028</text>
+
+  <rect x="500" y="410" width="200" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
+  <text x="600" y="436" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">한국어 / English</text>
+
+  <rect x="770" y="410" width="200" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
+  <text x="870" y="436" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">무료 Free</text>
+
+  <!-- URL -->
+  <text x="600" y="550" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="rgba(255,255,255,0.45)" text-anchor="middle">bs-pb.pages.dev</text>
+</svg>

@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /firebase-debug.log
 Disallow: /firebase.json
+Disallow: /GEMINI.md
+Disallow: /README.md
+Disallow: /blueprint.md
 
 Sitemap: https://bs-pb.pages.dev/sitemap.xml
