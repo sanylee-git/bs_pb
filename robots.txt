@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /firebase-debug.log
+Disallow: /firebase.json
+
+Sitemap: https://bs-pb.pages.dev/sitemap.xml
