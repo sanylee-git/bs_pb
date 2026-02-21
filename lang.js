@@ -44,12 +44,54 @@
 
             'index.comments.title': '댓글',
 
+            // --- index.html FAQ ---
+            'index.faq.title': '자주 묻는 질문',
+            'index.faq.q1.question': 'CW Calendar는 어떤 서비스인가요?',
+            'index.faq.q1.summary': 'ISO 8601 표준 주차(CW) 기반의 무료 달력 서비스입니다.',
+            'index.faq.q1.detail': 'CW Calendar는 연간 달력을 주차 단위로 시각화하여 업무 일정을 체계적으로 관리할 수 있는 웹 서비스입니다. 2024~2028년 달력과 한국·미국 공휴일을 함께 제공하며, 회원가입 없이 즉시 무료로 이용할 수 있습니다.',
+            'index.faq.q2.question': '주차(CW)는 어떻게 계산하나요?',
+            'index.faq.q2.summary': 'ISO 8601 기준으로 1월 첫 번째 목요일을 포함한 주가 CW1입니다.',
+            'index.faq.q2.detail': '한 주는 월요일에 시작하며, 해당 연도의 첫 번째 목요일을 포함한 주가 CW1(첫째 주)입니다. 이 방식은 유럽과 글로벌 기업에서 국제 표준으로 사용됩니다. CW Calendar는 ISO 8601을 정확히 구현하여 주차 계산의 혼동을 없앱니다.',
+            'index.faq.q3.question': '어떤 연도의 달력을 볼 수 있나요?',
+            'index.faq.q3.summary': '현재 2024년부터 2028년까지 5개 연도를 지원합니다.',
+            'index.faq.q3.detail': '달력 상단 좌우 화살표 버튼으로 연도를 전환하며 2024~2028년 달력을 확인할 수 있습니다. 각 연도의 한국·미국 공휴일 데이터가 포함되어 있으며, 지원 범위는 추후 업데이트로 확장될 예정입니다.',
+            'index.faq.q4.question': '스마트폰에서도 편하게 사용할 수 있나요?',
+            'index.faq.q4.summary': '네, 모든 기기에 최적화된 반응형 웹 디자인을 제공합니다.',
+            'index.faq.q4.detail': 'CW Calendar는 스마트폰·태블릿·PC 등 모든 화면 크기에서 자동으로 최적화된 레이아웃을 제공합니다. 별도의 앱 설치 없이 브라우저에서 바로 이용 가능하며, 라이트·다크·시스템 테마도 지원합니다.',
+            'index.faq.q5.question': 'CW와 주차는 같은 뜻인가요?',
+            'index.faq.q5.summary': '네, CW(Calendar Week)는 주차의 국제 표준(ISO 8601) 영어 약자입니다.',
+            'index.faq.q5.detail': '주차(週次)는 연간 특정 주를 번호로 나타내는 한국어 표현이며, CW는 동일 개념의 국제 표준 영어 약자입니다. 독일에서는 KW(Kalenderwoche)라 부르기도 하며, 세 표현 모두 같은 의미로 사용됩니다. 국내외 팀 협업 시 혼용해도 무방합니다.',
+
+            // --- index.html 리뷰 ---
+            'index.review.title': '서비스 평가 및 리뷰',
+            'index.review.subtitle': 'CW Calendar를 이용해보셨나요? 여러분의 소중한 의견이 서비스 발전에 큰 힘이 됩니다.',
+            'index.review.disqus': '댓글로 리뷰 남기기',
+            'index.review.note': '현재 외부 전문 리뷰 플랫폼 등록을 준비 중입니다. 댓글 섹션을 통해 직접 평가를 남겨주시면 감사드립니다.',
+
             // --- about.html ---
             'about.intro.title': 'CW Calendar 소개',
             'about.intro.body1': 'CW Calendar는 복잡한 프로젝트와 업무 일정을 주차(Calendar Week) 기준으로 명확하게 관리할 수 있도록 돕는 전문적인 도구입니다. 저희는 모든 전문가, 기획자, 매니저분들이 글로벌 표준 방식인 주차 시스템을 통해 업무 효율성을 극대화하고, 보다 체계적으로 스케줄을 관리하기를 바랍니다.',
             'about.intro.body2': '이 사이트는 단순히 주차 정보를 보여주는 것을 넘어, 효과적인 업무 관리 방법과 생산성을 높이기 위한 다양한 팁을 제공하여 여러분의 성공적인 프로젝트 수행을 돕습니다. 저희의 목표는 여러분이 복잡한 일정 속에서 길을 잃지 않고, 모든 업무를 계획대로 완수할 수 있도록 지원하는 것입니다.',
             'about.mission.title': '우리의 미션',
             'about.mission.body': '저희의 미션은 모든 사용자가 자신의 업무 스케줄을 주차(CW) 기반으로 체계적으로 관리하고, 이를 통해 프로젝트의 성공 가능성을 높일 수 있도록 돕는 것입니다. CW Calendar와 함께라면, 더 이상 스케줄 관리가 스트레스가 아닌, 성공을 위한 즐거운 과정이 될 것입니다.',
+
+            // --- about.html FAQ ---
+            'about.faq.title': '자주 묻는 질문',
+            'about.faq.q1.question': 'CW Calendar는 어떤 분들에게 유용한가요?',
+            'about.faq.q1.summary': '글로벌 협업 환경의 직장인, 프리랜서, 프로젝트 매니저에게 유용합니다.',
+            'about.faq.q1.detail': '해외 팀과 협업하거나 유럽·독일계 기업과 소통이 잦은 실무자, 연간 일정을 주 단위로 관리하는 PM에게 최적화된 서비스입니다. ISO 8601 주차 시스템을 처음 접하는 분들도 직관적인 UI로 쉽게 활용할 수 있습니다.',
+            'about.faq.q2.question': '서비스 이용에 비용이 발생하나요?',
+            'about.faq.q2.summary': '완전 무료로, 회원가입도 필요하지 않습니다.',
+            'about.faq.q2.detail': 'CW Calendar의 모든 기능은 무료입니다. 로그인·결제 없이 브라우저에서 바로 이용 가능합니다. 서비스 운영 비용은 페이지 내 광고로 충당하며, 사용자 경험에 최소한의 영향만 미치도록 설계되었습니다.',
+            'about.faq.q3.question': '공휴일 데이터는 얼마나 정확한가요?',
+            'about.faq.q3.summary': '각국 정부 공식 발표 기준으로 검수된 데이터를 사용합니다.',
+            'about.faq.q3.detail': '한국 공휴일은 「관공서의 공휴일에 관한 규정」 기준, 미국 공휴일은 연방 공휴일(Federal Holidays) 기준을 따릅니다. 2024~2028년 데이터를 제공하며, 대체 공휴일을 포함한 정확한 날짜 정보를 유지합니다.',
+            'about.faq.q4.question': '다크 모드를 지원하나요?',
+            'about.faq.q4.summary': '라이트·다크·시스템 세 가지 테마를 지원합니다.',
+            'about.faq.q4.detail': '상단 헤더에서 Light, Dark, System 세 가지 테마를 선택할 수 있습니다. System을 선택하면 기기의 다크 모드 설정을 자동 적용하며, 선택한 테마는 브라우저에 저장되어 다음 방문 시에도 유지됩니다.',
+            'about.faq.q5.question': 'CW Calendar는 어떤 기술로 만들어졌나요?',
+            'about.faq.q5.summary': '순수 HTML·CSS·JavaScript로 만든 경량 정적 웹 서비스입니다.',
+            'about.faq.q5.detail': '외부 프레임워크 없이 Vanilla JavaScript와 Web Components 기술로 개발되어 빠르고 가볍습니다. Cloudflare Pages의 글로벌 CDN을 통해 서비스되며, 최소한의 의존성으로 빠른 로딩과 높은 접근성을 제공합니다.',
 
             // --- privacy.html ---
             'privacy.title': '개인정보처리방침',
@@ -136,12 +178,54 @@
 
             'index.comments.title': 'Comments',
 
+            // --- index.html FAQ (EN) ---
+            'index.faq.title': 'Frequently Asked Questions',
+            'index.faq.q1.question': 'What is CW Calendar?',
+            'index.faq.q1.summary': 'A free calendar service based on the ISO 8601 Calendar Week (CW) standard.',
+            'index.faq.q1.detail': 'CW Calendar is a web service that visualizes annual calendars week-by-week to help you systematically manage work schedules. It provides calendars for 2024–2028 with Korean and US public holidays, all free without registration.',
+            'index.faq.q2.question': 'How is a Calendar Week (CW) calculated?',
+            'index.faq.q2.summary': 'Per ISO 8601, CW1 is the week containing the first Thursday of January.',
+            'index.faq.q2.detail': 'A week starts on Monday, and CW1 is the week containing the first Thursday of the year. This standard is widely used by European and global companies. CW Calendar implements ISO 8601 precisely, eliminating any confusion in week numbering.',
+            'index.faq.q3.question': 'Which years does CW Calendar support?',
+            'index.faq.q3.summary': 'Currently supports 5 years: 2024 through 2028.',
+            'index.faq.q3.detail': 'Use the left/right arrow buttons at the top of the calendar to navigate between 2024 and 2028. Public holiday data for Korea and the US is included for all supported years, with plans to expand coverage in future updates.',
+            'index.faq.q4.question': 'Is CW Calendar optimized for mobile?',
+            'index.faq.q4.summary': 'Yes, it provides a responsive design optimized for all devices.',
+            'index.faq.q4.detail': 'CW Calendar automatically adapts its layout for smartphones, tablets, and PCs. No app installation is needed — just use it in your browser. Light, dark, and system themes are also fully supported.',
+            'index.faq.q5.question': 'Are "CW" and "week number" the same thing?',
+            'index.faq.q5.summary': 'Yes, CW (Calendar Week) is the international standard abbreviation for the same concept.',
+            'index.faq.q5.detail': 'CW stands for Calendar Week — the ISO 8601 standard term for numbering the weeks of a year. Germany uses "KW (Kalenderwoche)" for the same concept. All three terms refer to the same standardized week-numbering system and can be used interchangeably.',
+
+            // --- index.html Review (EN) ---
+            'index.review.title': 'Rate & Review This Service',
+            'index.review.subtitle': 'Have you tried CW Calendar? Your feedback helps us improve and grow.',
+            'index.review.disqus': 'Leave a Review (Comments)',
+            'index.review.note': 'We are currently preparing listings on external review platforms. Please share your thoughts in the comments section below.',
+
             // --- about.html ---
             'about.intro.title': 'About CW Calendar',
             'about.intro.body1': 'CW Calendar is a professional tool that helps you clearly manage complex projects and work schedules based on Calendar Weeks (CW). We hope all professionals, planners, and managers can maximize work efficiency and manage schedules more systematically through the globally standard CW system.',
             'about.intro.body2': 'This site goes beyond simply displaying CW information — it also provides effective work management methods and various productivity tips to help you successfully execute your projects. Our goal is to support you in completing all tasks as planned, so you never lose your way in a complex schedule.',
             'about.mission.title': 'Our Mission',
             'about.mission.body': 'Our mission is to help all users systematically manage their work schedules on a CW basis, thereby increasing the likelihood of project success. With CW Calendar, schedule management will no longer be a source of stress — it will become an enjoyable process on the road to success.',
+
+            // --- about.html FAQ (EN) ---
+            'about.faq.title': 'Frequently Asked Questions',
+            'about.faq.q1.question': 'Who is CW Calendar useful for?',
+            'about.faq.q1.summary': 'Ideal for professionals, freelancers, and project managers in global work environments.',
+            'about.faq.q1.detail': 'CW Calendar is optimized for those who collaborate with overseas teams, frequently communicate with European or German companies, or manage annual schedules by week. Even beginners to the ISO 8601 system can easily use it with our intuitive UI.',
+            'about.faq.q2.question': 'Is there any cost to use CW Calendar?',
+            'about.faq.q2.summary': 'Completely free with no registration required.',
+            'about.faq.q2.detail': 'All features of CW Calendar are free. Use it directly in your browser without logging in or paying. Operating costs are covered by page ads, which are designed to minimize impact on the user experience.',
+            'about.faq.q3.question': 'How accurate is the holiday data?',
+            'about.faq.q3.summary': 'Holiday data is verified against official government announcements.',
+            'about.faq.q3.detail': 'Korean holidays follow the official "Regulations on Holidays of Public Offices," and US holidays follow the Federal Holiday schedule. The data covers 2024–2028, including substitute holidays, and is maintained for accuracy.',
+            'about.faq.q4.question': 'Is dark mode supported?',
+            'about.faq.q4.summary': 'Yes, Light, Dark, and System themes are all supported.',
+            'about.faq.q4.detail': 'Choose from Light, Dark, or System themes in the header. The System option automatically follows your device\'s dark mode setting, and your theme preference is saved in your browser for future visits.',
+            'about.faq.q5.question': 'What technology is CW Calendar built with?',
+            'about.faq.q5.summary': 'A lightweight static web service built with pure HTML, CSS, and JavaScript.',
+            'about.faq.q5.detail': 'CW Calendar is built with Vanilla JavaScript and Web Components — no external frameworks. It is served via Cloudflare Pages\' global CDN, offering fast loading speeds and high accessibility with minimal dependencies.',
 
             // --- privacy.html ---
             'privacy.title': 'Privacy Policy',

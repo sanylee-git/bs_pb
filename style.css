@@ -383,6 +383,128 @@ body {
     justify-content: flex-end;
 }
 
+/* === FAQ / Q&A 섹션 === */
+.faq-section {
+    grid-column: 1 / -1;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+}
+
+.faq-item {
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.faq-item[open] {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    list-style: none;
+    background: var(--card-background);
+    user-select: none;
+    transition: background-color 0.15s;
+    gap: 0.75rem;
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.faq-item[open] > .faq-question::after {
+    content: '\2212'; /* − */
+}
+
+.faq-question:hover {
+    background-color: var(--accent-color);
+}
+
+.faq-answer {
+    padding: 1rem 1.25rem 1.25rem;
+    border-top: 1px solid var(--border-color);
+    animation: faqIn 0.18s ease;
+}
+
+@keyframes faqIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.faq-ans-summary {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    margin-bottom: 0.45rem;
+}
+
+.faq-ans-detail {
+    color: var(--muted-text-color);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* === 리뷰 / 신뢰 섹션 === */
+.review-section {
+    grid-column: 1 / -1;
+}
+
+.review-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.review-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-decoration: none;
+    background: var(--card-background);
+    transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+    font-family: var(--font-family);
+}
+
+.review-link:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.12);
+}
+
+.review-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted-text-color);
+    line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
     .content-sections {

@@ -46,10 +46,13 @@
     <link rel="dns-prefetch" href="https://www.clarity.ms">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 폰트 비동기 로딩: 렌더 블로킹 제거 → LCP 개선 -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"></noscript>
     <link rel="stylesheet" href="style.css">
     <script src="theme.js" defer></script>
     <script src="lang.js" defer></script>
+    <script src="geo-tracking.js" defer></script>
     <meta name="google-adsense-account" content="ca-pub-9688338422874533">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9688338422874533" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -146,6 +149,22 @@
                 "@type": "Answer",
                 "text": "ISO 8601 국제 표준에 따르면 한 주의 시작은 월요일입니다. CW Calendar는 이 기준을 따르며, 1월 첫 번째 목요일을 포함한 주가 해당 연도의 CW1(첫 번째 주)이 됩니다."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "어떤 연도의 달력을 볼 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "현재 2024년부터 2028년까지 5개 연도를 지원합니다. 달력 상단 좌우 화살표 버튼으로 연도를 전환하며, 각 연도의 한국·미국 공휴일 데이터가 포함되어 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "스마트폰에서도 CW Calendar를 사용할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 모든 기기에 최적화된 반응형 웹 디자인을 제공합니다. 스마트폰·태블릿·PC 등 모든 화면 크기에서 자동으로 최적화된 레이아웃을 제공하며, 별도의 앱 설치 없이 브라우저에서 바로 이용 가능합니다."
+              }
             }
           ]
         }
@@ -215,6 +234,58 @@
                 </ol>
             </section>
 
+            <!-- FAQ / Q&A 블록 (GEO: AI 크롤러가 질문-답변 패턴 인식) -->
+            <section class="content-section faq-section" aria-label="자주 묻는 질문">
+                <h3 class="section-title" data-i18n="index.faq.title">자주 묻는 질문</h3>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="index.faq.q1.question">CW Calendar는 어떤 서비스인가요?</summary>
+                        <div class="faq-answer">
+                            <p class="faq-ans-summary" data-i18n="index.faq.q1.summary">ISO 8601 표준 주차(CW) 기반의 무료 달력 서비스입니다.</p>
+                            <p class="faq-ans-detail" data-i18n="index.faq.q1.detail">CW Calendar는 연간 달력을 주차 단위로 시각화하여 업무 일정을 체계적으로 관리할 수 있는 웹 서비스입니다. 2024~2028년 달력과 한국·미국 공휴일을 함께 제공하며, 회원가입 없이 즉시 무료로 이용할 수 있습니다.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="index.faq.q2.question">주차(CW)는 어떻게 계산하나요?</summary>
+                        <div class="faq-answer">
+                            <p class="faq-ans-summary" data-i18n="index.faq.q2.summary">ISO 8601 기준으로 1월 첫 번째 목요일을 포함한 주가 CW1입니다.</p>
+                            <p class="faq-ans-detail" data-i18n="index.faq.q2.detail">한 주는 월요일에 시작하며, 해당 연도의 첫 번째 목요일을 포함한 주가 CW1(첫째 주)입니다. 이 방식은 유럽과 글로벌 기업에서 국제 표준으로 사용됩니다. CW Calendar는 ISO 8601을 정확히 구현하여 주차 계산의 혼동을 없앱니다.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="index.faq.q3.question">어떤 연도의 달력을 볼 수 있나요?</summary>
+                        <div class="faq-answer">
+                            <p class="faq-ans-summary" data-i18n="index.faq.q3.summary">현재 2024년부터 2028년까지 5개 연도를 지원합니다.</p>
+                            <p class="faq-ans-detail" data-i18n="index.faq.q3.detail">달력 상단 좌우 화살표 버튼으로 연도를 전환하며 2024~2028년 달력을 확인할 수 있습니다. 각 연도의 한국·미국 공휴일 데이터가 포함되어 있으며, 지원 범위는 추후 업데이트로 확장될 예정입니다.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="index.faq.q4.question">스마트폰에서도 편하게 사용할 수 있나요?</summary>
+                        <div class="faq-answer">
+                            <p class="faq-ans-summary" data-i18n="index.faq.q4.summary">네, 모든 기기에 최적화된 반응형 웹 디자인을 제공합니다.</p>
+                            <p class="faq-ans-detail" data-i18n="index.faq.q4.detail">CW Calendar는 스마트폰·태블릿·PC 등 모든 화면 크기에서 자동으로 최적화된 레이아웃을 제공합니다. 별도의 앱 설치 없이 브라우저에서 바로 이용 가능하며, 라이트·다크·시스템 테마도 지원합니다.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="index.faq.q5.question">CW와 주차는 같은 뜻인가요?</summary>
+                        <div class="faq-answer">
+                            <p class="faq-ans-summary" data-i18n="index.faq.q5.summary">네, CW(Calendar Week)는 주차의 국제 표준(ISO 8601) 영어 약자입니다.</p>
+                            <p class="faq-ans-detail" data-i18n="index.faq.q5.detail">주차(週次)는 연간 특정 주를 번호로 나타내는 한국어 표현이며, CW는 동일 개념의 국제 표준 영어 약자입니다. 독일에서는 KW(Kalenderwoche)라 부르기도 하며, 세 표현 모두 같은 의미로 사용됩니다. 국내외 팀 협업 시 혼용해도 무방합니다.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- 리뷰 / 신뢰 섹션 -->
+            <section class="content-section review-section">
+                <h3 class="section-title" data-i18n="index.review.title">서비스 평가 및 리뷰</h3>
+                <p class="section-text" data-i18n="index.review.subtitle">CW Calendar를 이용해보셨나요? 여러분의 소중한 의견이 서비스 발전에 큰 힘이 됩니다.</p>
+                <div class="review-cta">
+                    <a href="#disqus_thread" class="review-link" data-i18n="index.review.disqus">💬 댓글로 리뷰 남기기</a>
+                </div>
+                <p class="review-note" data-i18n="index.review.note">현재 외부 전문 리뷰 플랫폼 등록을 준비 중입니다. 댓글 섹션을 통해 직접 평가를 남겨주시면 감사드립니다.</p>
+            </section>
+
             <section class="content-section">
                 <h3 class="section-title" data-i18n="index.contact.title">제휴 문의</h3>
                 <p class="section-text" data-i18n="index.contact.subtitle">비즈니스 제휴 및 협업 문의를 남겨주시면 빠르게 답변드리겠습니다.</p>
@@ -266,7 +337,7 @@
         </div>
     </footer>
     
-    <script src="holidays.js"></script>
+    <script src="holidays.js" defer></script>
     <script src="main.js" type="module"></script>
 </body>
 </html>
