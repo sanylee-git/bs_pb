@@ -6,4 +6,23 @@ Disallow: /GEMINI.md
 Disallow: /README.md
 Disallow: /blueprint.md
 
+# GEO: AI 검색 엔진 크롤러 명시적 허용
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
 Sitemap: https://bs-pb.pages.dev/sitemap.xml

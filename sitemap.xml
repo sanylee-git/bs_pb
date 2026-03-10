@@ -6,7 +6,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/"/>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,8 +15,8 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/about.html"/>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
@@ -24,8 +24,8 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/privacy.html"/>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.4</priority>
   </url>
 </urlset>
