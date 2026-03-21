@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CG3RLZ4G13" crossorigin="anonymous"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CG3RLZ4G13');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>업무·프로젝트 관리에서 CW(주차) 활용법 — 실전 가이드 — CW Calendar</title>
+    <meta name="description" content="CW(Calendar Week)를 업무와 프로젝트 관리에 실제로 활용하는 방법을 설명합니다. 글로벌 협업, 주간 보고, 제조·물류 SCM, 분기 계획에서 CW를 사용하는 실전 예시와 템플릿을 제공합니다.">
+    <meta name="keywords" content="CW 업무 활용, Calendar Week 프로젝트 관리, 주차 업무 관리, CW 주간보고, ISO 8601 프로젝트, KW 업무, 글로벌 협업 CW, SCM 주차 관리">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="CW Calendar">
+    <link rel="canonical" href="https://bs-pb.pages.dev/guide-cw-business.html">
+    <link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/guide-cw-business.html">
+    <link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/guide-cw-business.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="업무·프로젝트 관리에서 CW(주차) 활용법 — 실전 가이드">
+    <meta property="og:description" content="CW를 글로벌 협업, 주간 보고, 제조·SCM, 분기 계획에 활용하는 실전 가이드. 예시·템플릿 포함.">
+    <meta property="og:url" content="https://bs-pb.pages.dev/guide-cw-business.html">
+    <meta property="og:site_name" content="CW Calendar">
+    <meta property="og:image" content="https://bs-pb.pages.dev/og-image.svg">
+    <meta property="og:locale" content="ko_KR">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="업무·프로젝트 관리에서 CW 활용법 — CW Calendar</title>
+    <meta name="twitter:description" content="CW를 글로벌 협업, 주간 보고, 제조·SCM에 활용하는 실전 가이드.">
+    <meta name="twitter:image" content="https://bs-pb.pages.dev/og-image.svg">
+    <meta name="theme-color" content="#1a56db">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"></noscript>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+    <script src="lang.js" defer></script>
+    <script src="geo-tracking.js" defer></script>
+    <meta name="google-adsense-account" content="ca-pub-9688338422874533">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9688338422874533" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.crossOrigin="anonymous";t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vkfai0wzl3");
+    </script>
+    <!-- JSON-LD 구조화 데이터 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://bs-pb.pages.dev/guide-cw-business.html",
+          "headline": "업무·프로젝트 관리에서 CW(주차) 활용법 — 실전 가이드",
+          "description": "CW(Calendar Week)를 업무와 프로젝트 관리에 실제로 활용하는 방법. 글로벌 협업, 주간 보고, 제조·SCM, 분기 계획 실전 예시 포함.",
+          "url": "https://bs-pb.pages.dev/guide-cw-business.html",
+          "datePublished": "2024-01-01",
+          "dateModified": "2026-03-21",
+          "inLanguage": "ko",
+          "author": { "@id": "https://bs-pb.pages.dev/#organization" },
+          "publisher": { "@id": "https://bs-pb.pages.dev/#organization" },
+          "isPartOf": { "@id": "https://bs-pb.pages.dev/#website" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://bs-pb.pages.dev/" },
+            { "@type": "ListItem", "position": 2, "name": "업무에서 CW 활용법", "item": "https://bs-pb.pages.dev/guide-cw-business.html" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "CW(Calendar Week)를 왜 업무에서 사용하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CW는 글로벌 팀이 동일한 기준으로 일정을 이야기할 수 있게 해줍니다. '3월 마지막 주'는 나라마다 달리 해석될 수 있지만, 'CW13 2026'은 전 세계 어디서나 2026년 3월 23일(월)~29일(일)로 동일하게 이해됩니다. 유럽 파트너사, 독일계 기업, 글로벌 제조업체와 협업하는 환경에서 특히 필수적입니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "주간 보고에 CW를 어떻게 표기하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "주간 보고 제목에 'CW12 2026 Weekly Report' 또는 '[CW12] 주간 업무 보고'와 같이 CW 번호를 명시합니다. 이렇게 하면 연간 보고서 이력을 CW 번호 순으로 정렬하고 검색할 수 있어 이력 관리가 편리해집니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <h1 class="logo"><a href="index.html">CW Calendar</a></h1>
+                <nav class="nav">
+                    <a href="index.html" class="nav-item" data-i18n="shared.nav.home">홈</a>
+                    <a href="about.html" class="nav-item" data-i18n="shared.nav.about">소개</a>
+                    <a href="guide-iso8601.html" class="nav-item">ISO 8601 가이드</a>
+                    <a href="terms.html" class="nav-item" data-i18n="shared.nav.terms">이용약관</a>
+                    <a href="privacy.html" class="nav-item" data-i18n="shared.nav.privacy">개인정보처리방침</a>
+                </nav>
+            </div>
+            <div class="theme-switcher">
+                <button data-theme-switcher="light">Light</button>
+                <button data-theme-switcher="dark">Dark</button>
+                <button data-theme-switcher="system">System</button>
+            </div>
+            <div class="lang-switcher">
+                <button data-lang-switcher="ko">한</button>
+                <button data-lang-switcher="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Breadcrumb 내비게이션 -->
+        <nav class="breadcrumb-nav" aria-label="현재 위치">
+            <a href="index.html">홈</a>
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span aria-current="page">업무·프로젝트 관리에서 CW 활용법</span>
+        </nav>
+
+        <!-- Key Takeaways -->
+        <div class="key-takeaways" role="note" aria-label="핵심 요약">
+            <div class="key-takeaways-header">
+                <span class="key-takeaways-icon">⚡</span>
+                <strong>이 가이드의 핵심 요약</strong>
+            </div>
+            <ul class="key-takeaways-list">
+                <li>CW(Calendar Week)는 <strong>글로벌 팀 간 일정 소통</strong>에서 모호함을 제거하는 국제 표준 방식입니다.</li>
+                <li>주간 보고, 프로젝트 일정, 제조·SCM 계획에서 CW를 사용하면 <strong>연간 이력 관리와 검색이 용이</strong>해집니다.</li>
+                <li>공휴일이 많은 주(CW 기준)를 사전에 파악하면 <strong>마감일 설정과 버퍼 계획</strong>을 더 정확하게 할 수 있습니다.</li>
+                <li>CW를 도입하기 위한 별도의 도구나 비용이 필요 없습니다. <a href="index.html" class="link">CW Calendar</a>에서 무료로 즉시 활용할 수 있습니다.</li>
+            </ul>
+        </div>
+
+        <!-- E-E-A-T 운영 정보 박스 -->
+        <aside class="service-info-box" role="complementary" aria-label="문서 정보">
+            <div class="service-info-icon" aria-hidden="true">💼</div>
+            <div class="service-info-content">
+                <div class="service-info-name">CW Calendar 운영팀 작성</div>
+                <div class="service-info-desc">CW 시스템을 직접 사용하는 글로벌 협업 환경의 실무 경험을 바탕으로 작성된 가이드입니다. 제조업·IT·물류 분야의 실제 CW 활용 패턴을 반영하였습니다.</div>
+                <div class="service-info-meta">
+                    <span>최초 작성: 2024년</span>
+                    <span class="sep">·</span>
+                    <span>최종 검토: 2026년 3월 21일</span>
+                    <span class="sep">·</span>
+                    <span>대상 독자: PM, 기획자, 글로벌 협업 실무자</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 1. 왜 CW를 사용하나? -->
+        <section class="content-section" style="margin-top: 0;">
+            <h2 class="section-title">왜 업무에서 CW(주차)를 사용하나요?</h2>
+            <p class="section-text">업무 현장에서 일정을 이야기할 때 흔히 이런 상황이 생깁니다. "다음 달 세 번째 주까지 납품해 주세요." — 이 문장은 국가마다, 팀마다, 심지어 사람마다 다르게 해석될 수 있습니다. 한국의 '3월 셋째 주'와 독일 파트너사의 '3. Woche März'가 같은 날을 가리키는지도 명확하지 않습니다.</p>
+            <p class="section-text">반면 <strong>"CW12 2026까지 납품해 주세요"</strong>라고 하면 전 세계 어디서나 동일한 주(2026년 3월 16일 월요일~22일 일요일)를 의미합니다. ISO 8601 표준인 CW를 사용하면:</p>
+            <ul class="list" style="margin-top: 0.75rem;">
+                <li class="list-item"><strong>모호함 제거:</strong> 국가별·팀별 달력 차이로 인한 일정 오해를 원천 차단합니다.</li>
+                <li class="list-item"><strong>이력 관리 편의성:</strong> 주간 보고, 스프린트, 프로덕션 로트 등을 CW 번호로 관리하면 시간순 정렬과 검색이 쉬워집니다.</li>
+                <li class="list-item"><strong>공휴일 고려:</strong> CW 달력에서 공휴일이 있는 주를 미리 파악하여 일정에 버퍼를 두거나 마감일을 조정할 수 있습니다.</li>
+                <li class="list-item"><strong>글로벌 표준 준수:</strong> 유럽(특히 독일·스웨덴·네덜란드 등), 글로벌 제조업체·물류사의 표준 방식과 호환됩니다.</li>
+            </ul>
+        </section>
+
+        <!-- 2. 글로벌 프로젝트 관리 -->
+        <section class="content-section">
+            <h2 class="section-title">활용 사례 1: 글로벌 프로젝트 관리</h2>
+
+            <h3 class="section-subtitle">이메일·보고서에서 CW 표기하기</h3>
+            <p class="section-text">글로벌 팀과의 이메일, 보고서, 프레젠테이션에서 CW를 일정 기준으로 활용하면 소통 효율이 크게 높아집니다.</p>
+
+            <div class="info-highlight">
+                <strong>실전 예시 — 영문 이메일 일정 표기:</strong><br><br>
+                "The prototype delivery is planned for <strong>CW15 2026</strong> (April 6–12). Please confirm if your team is available for the review meeting in <strong>CW16</strong> (April 13–19)."<br><br>
+                위 방식으로 쓰면 수신자가 어느 나라에 있든 달력에서 정확한 주를 즉시 찾을 수 있습니다.
+            </div>
+
+            <h3 class="section-subtitle">프로젝트 타임라인 작성 시 CW 활용</h3>
+            <p class="section-text">프로젝트 타임라인을 CW 기준으로 작성하면 다음과 같은 장점이 있습니다.</p>
+            <ul class="list" style="margin-top: 0.75rem;">
+                <li class="list-item"><strong>마일스톤 설정:</strong> "설계 완료: CW10 2026", "프로토타입 제출: CW15 2026", "최종 납품: CW22 2026"과 같이 명확하게 표기합니다.</li>
+                <li class="list-item"><strong>공휴일 버퍼:</strong> <a href="cw-2026.html" class="link">2026년 CW 표</a>를 참고하여 CW8(설날), CW39(추석) 등 공휴일 주에 마감일이 걸리지 않도록 사전에 조정합니다.</li>
+                <li class="list-item"><strong>스프린트 관리:</strong> 애자일 방식에서는 2주 스프린트를 "Sprint CW5-6 2026", "Sprint CW7-8 2026"과 같이 표기하여 스프린트 번호와 실제 날짜를 연결할 수 있습니다.</li>
+            </ul>
+
+            <h3 class="section-subtitle">독일·유럽 파트너와 협업 시</h3>
+            <p class="section-text">독일 기업은 CW(또는 KW — Kalenderwoche)를 일상적 업무 언어로 사용합니다. 회의에서 "Können wir das in KW13 besprechen?(13주차에 이야기할 수 있을까요?)"와 같은 표현이 자연스럽게 사용됩니다. 한국 팀이 CW 시스템에 익숙하다면 이런 대화에 즉각적으로 반응할 수 있어 글로벌 협업의 신뢰도가 높아집니다.</p>
+        </section>
+
+        <!-- ▼ AdSense: 중간 광고 ▼ -->
+        <div class="adsense-unit" aria-label="광고">
+            <span class="adsense-label">광고</span>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-9688338422874533"
+                 data-ad-slot="AUTO"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        <!-- ▲ AdSense: 중간 광고 ▼ -->
+
+        <!-- 3. 주간 보고 -->
+        <section class="content-section">
+            <h2 class="section-title">활용 사례 2: 주간 업무 보고 (Weekly Report)</h2>
+
+            <h3 class="section-subtitle">CW 기반 주간 보고의 장점</h3>
+            <p class="section-text">주간 보고서를 작성할 때 제목에 CW 번호를 포함하면 연간 보고서 이력을 체계적으로 관리할 수 있습니다.</p>
+
+            <div class="info-highlight">
+                <strong>권장 주간 보고 제목 형식:</strong><br>
+                • <code>[CW12 2026] 주간 업무 보고 — 개발팀</code><br>
+                • <code>Weekly Status Report — CW12 2026 (Mar 16–22)</code><br>
+                • <code>CW12 / 2026-03-16 ~ 2026-03-22 — Sprint 24 Review</code><br><br>
+                이 형식을 사용하면 파일 이름이나 이메일 제목으로 CW 번호 순 정렬이 가능하고, 특정 주의 보고서를 즉시 검색할 수 있습니다.
+            </div>
+
+            <h3 class="section-subtitle">주간 보고 섹션 구성 예시</h3>
+            <p class="section-text">CW 기반 주간 보고는 다음과 같은 구조로 작성하면 효과적입니다.</p>
+            <div class="table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>섹션</th>
+                            <th>내용</th>
+                            <th>CW 활용 방법</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>이번 주 (This Week)</strong></td>
+                            <td>CW12 2026: 완료한 업무</td>
+                            <td>CW 번호로 정확한 주 기준 설정</td>
+                        </tr>
+                        <tr>
+                            <td><strong>다음 주 계획 (Next Week)</strong></td>
+                            <td>CW13 2026: 예정 업무</td>
+                            <td>다음 CW로 계획 전달</td>
+                        </tr>
+                        <tr>
+                            <td><strong>마일스톤 업데이트</strong></td>
+                            <td>"CW15 납품 예정 — 현재 80% 진행"</td>
+                            <td>마감 CW를 기준으로 진행률 보고</td>
+                        </tr>
+                        <tr>
+                            <td><strong>리스크 및 이슈</strong></td>
+                            <td>"CW14 검토 미팅 일정 조율 필요"</td>
+                            <td>이슈가 발생하는 CW를 명시</td>
+                        </tr>
+                        <tr>
+                            <td><strong>공휴일 공지</strong></td>
+                            <td>"CW39: 추석 연휴로 업무 일수 감소"</td>
+                            <td>공휴일 주를 미리 공지</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 4. 제조·물류 -->
+        <section class="content-section">
+            <h2 class="section-title">활용 사례 3: 제조업 · 물류 · SCM 생산 계획</h2>
+
+            <h3 class="section-subtitle">제조업에서 CW의 표준화</h3>
+            <p class="section-text">제조업과 공급망(SCM) 분야에서는 CW가 사실상 업계 표준입니다. 독일·일본·유럽계 제조사들의 공식 생산 계획서, 발주서(PO), 납품 지시서(Delivery Order)에는 CW 기반의 일정이 기본으로 포함됩니다.</p>
+
+            <div class="info-highlight">
+                <strong>실전 예시 — 생산 계획 일정표 (발췌):</strong><br><br>
+                <em>배터리 팩 어셈블리 생산 스케줄 2026</em><br>
+                • CW08: 원자재 입고 확인 (설날 연휴 고려, 실질 업무 2일)<br>
+                • CW10: 1차 생산 배치(Lot A) 시작<br>
+                • CW14: Lot A 품질 검수 완료<br>
+                • CW18: 글로벌 배송 출하 (근로자의 날 전일)<br>
+                • CW22: 고객 수령 확인 및 인보이스 발행
+            </div>
+
+            <h3 class="section-subtitle">물류 리드 타임 계산에서 CW 활용</h3>
+            <p class="section-text">해상 운송을 예로 들면, 한국 부산항에서 독일 함부르크까지의 표준 리드 타임은 약 4~5주(CW 4~5개)입니다. 이 경우 역산하면:</p>
+            <ul class="list" style="margin-top: 0.75rem;">
+                <li class="list-item">고객 요청 도착일: CW22 2026 (5/25~31)</li>
+                <li class="list-item">선적 출항 시점: CW22 - 5주 = CW17 2026 (4/20~26)</li>
+                <li class="list-item">생산 완료 필요 시점: CW17 - 1주(포장·통관) = CW16 2026 (4/13~19)</li>
+                <li class="list-item">생산 시작 시점: CW16 - 3주(생산 리드타임) = CW13 2026 (3/23~29)</li>
+            </ul>
+            <p class="section-text" style="margin-top: 0.75rem;">이처럼 CW를 기반으로 역산하면 글로벌 공급망의 복잡한 일정을 명확하게 추적하고 관리할 수 있습니다. <a href="cw-2026.html" class="link">2026년 CW 전체표</a>를 참고하면 각 CW의 날짜 범위와 공휴일을 함께 확인할 수 있습니다.</p>
+
+            <h3 class="section-subtitle">재고 계획(S&OP)과 CW</h3>
+            <p class="section-text">판매·운영 계획(S&OP, Sales and Operations Planning)에서는 수요 예측과 생산 계획을 주 단위(CW)로 수립하는 것이 일반적입니다. 월 단위 계획보다 더 세밀한 재고 관리가 가능하고, 수요 변동에 빠르게 대응할 수 있습니다.</p>
+        </section>
+
+        <!-- ▼ AdSense: 중간 광고 ▼ -->
+        <div class="adsense-unit" aria-label="광고">
+            <span class="adsense-label">광고</span>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9688338422874533"
+                 data-ad-slot="AUTO"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        <!-- ▲ AdSense: 중간 광고 ▲ -->
+
+        <!-- 5. 분기 계획 -->
+        <section class="content-section">
+            <h2 class="section-title">활용 사례 4: 분기 계획 및 연간 일정 수립</h2>
+
+            <h3 class="section-subtitle">분기와 CW의 연결</h3>
+            <p class="section-text">1년 52~53주를 4개 분기로 나누면 각 분기는 약 13주(CW 13개)로 구성됩니다. CW를 기반으로 분기 목표를 설정하면 월 단위보다 더 균등하고 예측 가능한 일정 관리가 가능합니다.</p>
+
+            <div class="table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>분기</th>
+                            <th>ISO CW 범위 (2026 기준)</th>
+                            <th>주 수</th>
+                            <th>주요 한국 공휴일 주</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Q1</strong></td>
+                            <td>CW01 ~ CW13</td>
+                            <td>13주</td>
+                            <td>CW08 (설날), CW09~10 (삼일절)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Q2</strong></td>
+                            <td>CW14 ~ CW26</td>
+                            <td>13주</td>
+                            <td>CW18 (근로자의 날), CW19 (어린이날), CW22 (부처님오신날), CW23 (현충일)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Q3</strong></td>
+                            <td>CW27 ~ CW39</td>
+                            <td>13주</td>
+                            <td>CW33 (광복절), CW39 (추석)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Q4</strong></td>
+                            <td>CW40 ~ CW53</td>
+                            <td>14주 (2026 53주)</td>
+                            <td>CW40 (개천절), CW41 (한글날), CW52 (크리스마스)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="section-subtitle">연간 연차 계획과 CW</h3>
+            <p class="section-text">팀 단위로 연간 휴가 계획을 수립할 때 CW를 활용하면 특정 CW에 팀원이 집중적으로 부재하는 상황을 사전에 방지할 수 있습니다. 예를 들어 "CW30~CW35에는 팀원 동시 휴가를 최대 50%로 제한"하는 정책을 수립하면 여름 시즌 업무 공백을 최소화할 수 있습니다.</p>
+
+            <h3 class="section-subtitle">예산 사이클과 CW</h3>
+            <p class="section-text">연간 예산 계획에서도 CW를 활용할 수 있습니다. 특히 53주가 있는 해(예: 2026년)에는 CW53에 대한 예산 처리 방침(당해 연도 vs. 익년도)을 사전에 결정하고 회계·재무 팀과 공유해야 합니다.</p>
+        </section>
+
+        <!-- 6. CW 도입 체크리스트 -->
+        <section class="content-section">
+            <h2 class="section-title">팀에 CW 시스템 도입하는 방법</h2>
+
+            <h3 class="section-subtitle">단계별 도입 가이드</h3>
+            <ol class="list" style="list-style-type: decimal;">
+                <li class="list-item" style="margin-bottom: 1rem;"><strong>CW 기준 이해 공유:</strong> 팀 전체가 ISO 8601 CW의 기본 개념(월요일 시작, 첫 목요일 포함 주 = CW1)을 이해하도록 간단한 교육 자료를 공유합니다. 본 가이드의 <a href="guide-iso8601.html" class="link">ISO 8601 주차 완전 가이드</a>를 참고하세요.</li>
+                <li class="list-item" style="margin-bottom: 1rem;"><strong>연간 CW 표 배포:</strong> <a href="cw-2026.html" class="link">2026년 CW 전체표</a> 또는 <a href="index.html" class="link">CW Calendar</a>를 팀 공유 채널(Slack, Teams, 노션 등)에 고정합니다.</li>
+                <li class="list-item" style="margin-bottom: 1rem;"><strong>보고서·이메일 형식 표준화:</strong> 주간 보고 템플릿에 CW 번호 필드를 추가하고, 외부 커뮤니케이션에서도 CW 표기를 기본으로 합니다.</li>
+                <li class="list-item" style="margin-bottom: 1rem;"><strong>공휴일 주 사전 표시:</strong> 연간 계획 시 공휴일이 많은 주(CW8, CW39 등)를 미리 표시하고 마감일 배치 시 이를 반영합니다.</li>
+                <li class="list-item" style="margin-bottom: 1rem;"><strong>도구 설정:</strong> Jira, Azure DevOps, 노션, MS Project 등 사용 중인 프로젝트 관리 도구에서 CW 기반 일정 표시 기능을 활성화합니다. (Jira 스프린트 이름을 "CW12-13 2026 Sprint"와 같이 설정)</li>
+                <li class="list-item"><strong>점진적 확산:</strong> 처음에는 내부 보고서에만 CW를 도입하고, 익숙해지면 외부 파트너사와의 커뮤니케이션으로 확대합니다.</li>
+            </ol>
+
+            <h3 class="section-subtitle">자주 하는 실수와 주의사항</h3>
+            <ul class="list" style="margin-top: 0.75rem;">
+                <li class="list-item"><strong>연도 표기 생략:</strong> "CW1"이 아닌 반드시 "<strong>CW1 2026</strong>"으로 연도를 함께 표기하세요. 연말·연초에는 어느 연도의 CW인지 혼동이 생길 수 있습니다.</li>
+                <li class="list-item"><strong>ISO vs 미국식 혼용:</strong> Excel에서 WEEKNUM 함수 사용 시 return_type을 <strong>21(ISO 8601)</strong>로 설정했는지 반드시 확인하세요. 기본값 1(미국식)을 사용하면 연초·연말에 주차가 다르게 계산됩니다.</li>
+                <li class="list-item"><strong>53주 해 처리:</strong> CW53이 있는 해(2026년 등)에는 CW52를 마지막으로 가정하는 시스템 설정을 업데이트해야 할 수 있습니다.</li>
+                <li class="list-item"><strong>공휴일 주의 업무 일수 오산:</strong> 공휴일 주의 업무 일수를 5일로 계산하면 계획이 어긋납니다. <a href="cw-2026.html" class="link">CW 표</a>를 참고하여 실제 업무 가능 일수를 확인하세요.</li>
+            </ul>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="content-section" aria-label="자주 묻는 질문">
+            <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-question">CW(Calendar Week)를 왜 업무에서 사용하나요?</summary>
+                    <div class="faq-answer">
+                        <p class="faq-ans-summary">글로벌 팀이 동일한 기준으로 일정을 이야기할 수 있게 해주는 국제 표준 방식이기 때문입니다.</p>
+                        <p class="faq-ans-detail">'3월 마지막 주'는 나라마다 달리 해석될 수 있지만, 'CW13 2026'은 전 세계 어디서나 2026년 3월 23일(월)~29일(일)로 동일하게 이해됩니다. 유럽 파트너사, 독일계 기업, 글로벌 제조업체와 협업하는 환경에서 특히 필수적입니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">주간 보고에 CW를 어떻게 표기하나요?</summary>
+                    <div class="faq-answer">
+                        <p class="faq-ans-summary">보고서 제목에 '[CW12 2026] 주간 업무 보고'와 같이 CW 번호와 연도를 함께 명시합니다.</p>
+                        <p class="faq-ans-detail">이렇게 하면 연간 보고서 이력을 CW 번호 순으로 정렬하고 검색할 수 있어 이력 관리가 편리해집니다. 영문 보고서에는 'CW12 2026 Weekly Report (Mar 16–22)'와 같이 날짜 범위도 함께 표기하면 더욱 명확합니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Jira나 노션에서 CW를 어떻게 활용하나요?</summary>
+                    <div class="faq-answer">
+                        <p class="faq-ans-summary">Jira 스프린트 이름을 'CW12-13 2026 Sprint'와 같이 설정하고, 노션 데이터베이스에 CW 번호 속성을 추가하면 됩니다.</p>
+                        <p class="faq-ans-detail">Jira에서는 스프린트 이름에 CW 번호를 포함하면 스프린트 이력 검색이 쉬워집니다. 노션 캘린더 뷰에서는 별도의 CW 속성을 만들어 주차별 필터링에 활용할 수 있습니다. 보드(Board) 뷰에서 CW 속성으로 그룹핑하면 주차별 업무 현황 파악이 가능합니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Excel에서 날짜를 CW로 자동 변환하려면?</summary>
+                    <div class="faq-answer">
+                        <p class="faq-ans-summary">=WEEKNUM(날짜셀, 21)을 사용하면 ISO 8601 기준 CW 번호를 자동으로 구할 수 있습니다.</p>
+                        <p class="faq-ans-detail">=WEEKNUM(A2, 21) 함수는 A2 셀의 날짜에 해당하는 ISO 8601 주차를 반환합니다. 연도와 함께 표시하려면 =TEXT(ISOWEEKNUM(A2),"00")&" "&YEAR(A2-(WEEKDAY(A2,2)-4)) 수식을 사용하면 "12 2026" 형태로 출력됩니다. 더 간단하게는 =ISOWEEKNUM(A2) 함수도 동일한 ISO 8601 주차를 반환합니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">CW 시스템을 처음 도입할 때 팀원들에게 어떻게 설명하나요?</summary>
+                    <div class="faq-answer">
+                        <p class="faq-ans-summary">"ISO 국제 표준으로, 한 해의 각 주에 고유한 번호를 붙이는 방식"이라고 소개하고, 구체적인 예시로 설명합니다.</p>
+                        <p class="faq-ans-detail">"올해 3월 셋째 주는 CW12입니다. 내년 3월 셋째 주도 CW12 근처일 거예요. 이렇게 하면 '3월 셋째 주'라고 하는 것보다 전 세계 팀이 같은 주를 이해할 수 있어요."라는 설명이 효과적입니다. CW Calendar를 직접 보여주면서 CW 번호와 날짜 범위를 확인하면 이해가 빨라집니다.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- ▼ AdSense: 하단 광고 ▼ -->
+        <div class="adsense-unit" aria-label="광고">
+            <span class="adsense-label">광고</span>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9688338422874533"
+                 data-ad-slot="AUTO"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        <!-- ▲ AdSense: 하단 광고 ▲ -->
+
+        <!-- 관련 가이드 -->
+        <section class="content-section" style="margin-bottom: 3rem;">
+            <h2 class="section-title">관련 가이드 및 도구</h2>
+            <ul class="list">
+                <li class="list-item"><a href="index.html" class="link">CW Calendar — ISO 8601 주차 달력 바로가기</a></li>
+                <li class="list-item"><a href="guide-iso8601.html" class="link">ISO 8601 주차(CW) 완전 가이드</a> — 계산법·53주 해 목록·비교표</li>
+                <li class="list-item"><a href="cw-2026.html" class="link">2026년 CW 전체표</a> — CW01~CW53 날짜 범위 + 공휴일</li>
+                <li class="list-item"><a href="cw-2027.html" class="link">2027년 CW 전체표</a> — CW01~CW52 날짜 범위 + 공휴일</li>
+                <li class="list-item"><a href="about.html" class="link">CW Calendar 소개</a> — 서비스 기술 투명성 및 공휴일 데이터 출처</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CW Calendar. All Rights Reserved.</p>
+            <nav class="nav">
+                <a href="index.html" class="nav-item" data-i18n="shared.nav.home">홈</a>
+                <a href="about.html" class="nav-item" data-i18n="shared.nav.about">소개</a>
+                <a href="terms.html" class="nav-item" data-i18n="shared.nav.terms">이용약관</a>
+                <a href="privacy.html" class="nav-item" data-i18n="shared.nav.privacy">개인정보처리방침</a>
+                <a href="guide-iso8601.html" class="nav-item">ISO 8601 가이드</a>
+                <a href="cw-2026.html" class="nav-item">2026 CW표</a>
+                <a href="cw-2027.html" class="nav-item">2027 CW표</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

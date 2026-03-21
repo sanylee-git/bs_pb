@@ -24,8 +24,53 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/privacy.html"/>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://bs-pb.pages.dev/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/terms.html"/>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://bs-pb.pages.dev/guide-iso8601.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/guide-iso8601.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/guide-iso8601.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/guide-iso8601.html"/>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bs-pb.pages.dev/guide-cw-business.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/guide-cw-business.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/guide-cw-business.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/guide-cw-business.html"/>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bs-pb.pages.dev/cw-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/cw-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/cw-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/cw-2026.html"/>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bs-pb.pages.dev/cw-2027.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bs-pb.pages.dev/cw-2027.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bs-pb.pages.dev/cw-2027.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bs-pb.pages.dev/cw-2027.html"/>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

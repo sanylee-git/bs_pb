@@ -7,6 +7,7 @@
             // --- 공통 네비 ---
             'shared.nav.home': '홈',
             'shared.nav.about': '소개',
+            'shared.nav.terms': '이용약관',
             'shared.nav.privacy': '개인정보처리방침',
 
             // --- index.html ---
@@ -141,6 +142,7 @@
             // --- 공통 네비 ---
             'shared.nav.home': 'Home',
             'shared.nav.about': 'About',
+            'shared.nav.terms': 'Terms of Service',
             'shared.nav.privacy': 'Privacy Policy',
 
             // --- index.html ---
